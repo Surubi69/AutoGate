@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Barrera Automática</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Sistema de Barrera Automática</h1>
+        <p>Simulación interactiva de un sistema de peaje</p>
+    </header>
+    
+    <div class="container">
+        <div class="simulation-area">
+            <div class="status">Esperando vehículo</div>
+            
+            <div class="road">
+                <div class="lane-marking"></div>
+                
+                <div class="vehicle">
+                    <svg viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="10" y="20" width="80" height="25" rx="5" fill="#3498db"/>
+                        <rect x="20" y="10" width="50" height="15" rx="3" fill="#3498db"/>
+                        <circle cx="25" cy="45" r="8" fill="#333"/>
+                        <circle cx="25" cy="45" r="4" fill="#666"/>
+                        <circle cx="75" cy="45" r="8" fill="#333"/>
+                        <circle cx="75" cy="45" r="4" fill="#666"/>
+                        <rect x="75" y="20" width="15" height="5" fill="#ffd700"/>
+                    </svg>
+                </div>
+                
+                <div class="barrier-container">
+                    <div class="barrier-post">
+                        <div class="barrier-arm"></div>
+                        <div class="barrier-light"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button id="start-btn" class="btn pulse">Simular Vehículo</button>
+            <h3>Eventos del sistema</h3>
+            <div class="log-panel" id="log-panel"></div>
+        </div>
+    </div>
+    
+    <footer>
+        &copy; 2025 Sistema de Barrera Automática - Simulación
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
