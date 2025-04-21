@@ -3,54 +3,147 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Barrera Automática</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>AutoGate - Control de Acceso Vehicular</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body>
-    <header>
-        <h1>Sistema de Barrera Automática</h1>
-        <p>Simulación interactiva de un sistema de peaje</p>
-    </header>
-    
-    <div class="container">
-        <div class="simulation-area">
-            <div class="status">Esperando vehículo</div>
-            
-            <div class="road">
-                <div class="lane-marking"></div>
-                
-                <div class="vehicle">
-                    <svg viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="10" y="20" width="80" height="25" rx="5" fill="#3498db"/>
-                        <rect x="20" y="10" width="50" height="15" rx="3" fill="#3498db"/>
-                        <circle cx="25" cy="45" r="8" fill="#333"/>
-                        <circle cx="25" cy="45" r="4" fill="#666"/>
-                        <circle cx="75" cy="45" r="8" fill="#333"/>
-                        <circle cx="75" cy="45" r="4" fill="#666"/>
-                        <rect x="75" y="20" width="15" height="5" fill="#ffd700"/>
-                    </svg>
+    <nav class="navbar">
+        <a href="#home" class="logo">
+            <i class="fas fa-road"></i>AutoGate
+        </a>
+        <ul class="nav-links">
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#description">Descripción</a></li>
+            <li><a href="#features">Características</a></li>
+            <li><a href="#team">Integrantes</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <section id="home">
+        <div class="animated-bg">
+            <span style="--i:11;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:24;"></span>
+            <span style="--i:10;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:23;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:20;"></span>
+            <span style="--i:22;"></span>
+            <span style="--i:25;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:21;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:26;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:28;"></span>
+        </div>
+        <div class="home-content">
+            <h1 class="home-title">AutoGate</h1>
+            <p class="home-slogan">Tecnología que abre caminos</p>
+            <a href="#description" class="btn">Descubrir</a>
+        </div>
+    </section>
+
+    <section id="description">
+        <div class="section-container">
+            <h2 class="section-title fade-in">Descripción</h2>
+            <div class="description-content fade-in">
+                <p>AutoGate es un prototipo funcional de barrera automática inspirado en los sistemas modernos de peaje y control vehicular. Utilizando Arduino, sensores de proximidad y servomotores, automatiza el paso de vehículos sin intervención humana. Cuando un coche, moto u otro vehículo se aproxima, el sensor ultrasónico detecta su presencia y activa un servomotor que levanta una barrera. Este flujo simula lo que ocurre en accesos privados, estacionamientos o zonas restringidas.</p>
+                <br>
+                <p>AutoGate es también una propuesta educativa y escalable: económica, funcional y de gran potencial para proyectos de automatización urbana o smart cities.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="section-container">
+            <h2 class="section-title fade-in">Características</h2>
+            <div class="features-list">
+                <div class="feature-item fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3 class="feature-title">Detección automática de vehículos</h3>
+                    <p>Sensores ultrasónicos de alta precisión para detectar vehículos a distancia.</p>
                 </div>
-                
-                <div class="barrier-container">
-                    <div class="barrier-post">
-                        <div class="barrier-arm"></div>
-                        <div class="barrier-light"></div>
+                <div class="feature-item fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="feature-title">Activación de servomotor</h3>
+                    <p>Mecanismo de respuesta rápida y eficiente para levantar la barrera.</p>
+                </div>
+                <div class="feature-item fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <h3 class="feature-title">Bajo costo y alta replicabilidad</h3>
+                    <p>Diseñado con componentes accesibles y fáciles de conseguir.</p>
+                </div>
+                <div class="feature-item fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="feature-title">Ideal para entornos educativos y urbanos</h3>
+                    <p>Perfecto como proyecto de aprendizaje o como solución real para estacionamientos.</p>
+                </div>
+                <div class="feature-item fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Sistema escalable</h3>
+                    <p>Fácilmente adaptable a proyectos más grandes o complejos de control de acceso.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team">
+        <div class="section-container">
+            <h2 class="section-title fade-in">Integrantes</h2>
+            <div class="team-container">
+                <div class="team-card fade-in">
+                    <div class="card-image-container">
+                        <img src="/img/david.jpg" alt="Integrante masculino" class="card-image circle-shape">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="member-name">David Ramirez</h3>
+                        <p class="member-role">Creador del proyecto</p>
+                    </div>
+                </div>
+                <div class="team-card fade-in">
+                    <div class="card-image-container">
+                        <img src="/img/vero.jpg" alt="Integrante femenina" class="card-image circle-shape">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="member-name">Veronica Leiva</h3>
+                        <p class="member-role">Creadora del proyecto</p>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <div class="controls">
-            <button id="start-btn" class="btn pulse">Simular Vehículo</button>
-            <h3>Eventos del sistema</h3>
-            <div class="log-panel" id="log-panel"></div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-logo">
+            <i class="fas fa-road"></i> AutoGate
         </div>
-    </div>
-    
-    <footer>
-        &copy; 2025 Sistema de Barrera Automática - Simulación
+        <p class="footer-text">© 2025 AutoGate. Todos los derechos reservados. Proyecto de control de acceso vehicular automatizado.</p>
     </footer>
-    
-    <script src="script.js"></script>
+
+<script src="JS/script.js"></script>
 </body>
 </html>
